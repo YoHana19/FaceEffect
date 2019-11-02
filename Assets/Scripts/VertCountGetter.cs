@@ -15,7 +15,7 @@ public class VertCountGetter : MonoBehaviour
     private void Awake()
     {
         vfx = GetComponent<VisualEffect>();
-        faceMeshBaker = GetComponent<ARFaceMeshBaker>();
+        faceMeshBaker = transform.parent.GetComponent<ARFaceMeshBaker>();
         faceMeshBaker.GetVertexCount.AddListener(SetVfxSpawnCount);
     }
 

@@ -364,7 +364,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEngine.Texture2D, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: 
+      m_SerializableObject: '{"obj":{"fileID":8400000,"guid":"bd0eb497892814b06ba3dc35e0c5a7f0","type":2}}'
     min: -Infinity
     max: Infinity
     descendantCount: 0
@@ -377,7 +377,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEngine.Texture2D, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: 
+      m_SerializableObject: '{"obj":{"fileID":2800000,"guid":"35f34c8a9419a498d86d033dac2e8759","type":3}}'
     min: -Infinity
     max: Infinity
     descendantCount: 0
@@ -848,18 +848,18 @@ VisualEffectResource:
       \       float age = (float)0;\n        \n\n#if VFX_USE_PARTICLEID_CURRENT\n
       \        particleId = particleIndex;\n#endif\n#if VFX_USE_SEED_CURRENT\n        seed
       = WangHash(particleIndex ^ systemSeed);\n#endif\n        \n        {\n            uint
-      tmp_q = particleId / (uint)600;\n            uint tmp_r = tmp_q * (uint)600;\n
+      tmp_q = particleId / (uint)1024;\n            uint tmp_r = tmp_q * (uint)1024;\n
       \           uint tmp_s = particleId - tmp_r;\n            float tmp_t = (float)tmp_s;\n
-      \           float tmp_v = tmp_t / (float)600;\n            uint tmp_w = tmp_q
+      \           float tmp_v = tmp_t / (float)1024;\n            uint tmp_w = tmp_q
       ^ asuint(uniform_b);\n            float tmp_x = FixedRand(tmp_w);\n            float2
-      tmp_y = float2(tmp_v, tmp_x);\n            float2 tmp_ba = tmp_y - float2(0.0008333334,0);\n
+      tmp_y = float2(tmp_v, tmp_x);\n            float2 tmp_ba = tmp_y - float2(0.0004882813,0);\n
       \           SetCustomAttribute_B23F5E21( /*inout */UV1, tmp_ba);\n        }\n
-      \       {\n            uint tmp_q = particleId / (uint)600;\n            uint
-      tmp_r = tmp_q * (uint)600;\n            uint tmp_s = particleId - tmp_r;\n            float
-      tmp_t = (float)tmp_s;\n            float tmp_v = tmp_t / (float)600;\n            uint
-      tmp_w = tmp_q ^ asuint(uniform_b);\n            float tmp_x = FixedRand(tmp_w);\n
-      \           float2 tmp_y = float2(tmp_v, tmp_x);\n            float2 tmp_ba
-      = tmp_y + float2(0.0008333334,0);\n            SetCustomAttribute_B5FA1F34(
+      \       {\n            uint tmp_q = particleId / (uint)1024;\n            uint
+      tmp_r = tmp_q * (uint)1024;\n            uint tmp_s = particleId - tmp_r;\n
+      \           float tmp_t = (float)tmp_s;\n            float tmp_v = tmp_t / (float)1024;\n
+      \           uint tmp_w = tmp_q ^ asuint(uniform_b);\n            float tmp_x
+      = FixedRand(tmp_w);\n            float2 tmp_y = float2(tmp_v, tmp_x);\n            float2
+      tmp_ba = tmp_y + float2(0.0004882813,0);\n            SetCustomAttribute_B5FA1F34(
       /*inout */UV2, tmp_ba);\n        }\n        {\n            float4 tmp_q = SampleTexture(VFX_SAMPLER(texture_b),UV1,(float)0);\n
       \           float tmp_r = tmp_q[0];\n            float tmp_s = tmp_q[1];\n            float
       tmp_t = tmp_q[2];\n            float3 tmp_u = float3(tmp_r, tmp_s, tmp_t);\n
@@ -1312,17 +1312,17 @@ VisualEffectResource:
         - m_ExpressionIndex: 11
           m_Value: 3
         - m_ExpressionIndex: 14
-          m_Value: 600
+          m_Value: 1024
         - m_ExpressionIndex: 22
           m_Value: 1
       m_Vector2f:
         m_Array:
         - m_ExpressionIndex: 23
-          m_Value: {x: 0.00083333335, y: 0}
+          m_Value: {x: 0.00048828125, y: 0}
         - m_ExpressionIndex: 26
-          m_Value: {x: 0, y: 0}
+          m_Value: {x: 0.1, y: 0.1}
         - m_ExpressionIndex: 28
-          m_Value: {x: 9600, y: 9600}
+          m_Value: {x: 500, y: 500}
       m_Vector3f:
         m_Array:
         - m_ExpressionIndex: 8
@@ -1342,7 +1342,7 @@ VisualEffectResource:
       m_Uint:
         m_Array:
         - m_ExpressionIndex: 3
-          m_Value: 600
+          m_Value: 1024
       m_Int:
         m_Array:
         - m_ExpressionIndex: 15
@@ -1357,7 +1357,7 @@ VisualEffectResource:
           m_Value:
             serializedVersion: 2
             key0: {r: 9.082411, g: 4.4223256, b: 2.8531134, a: 1}
-            key1: {r: 1.319508, g: 1.319508, b: 1.319508, a: 1}
+            key1: {r: 1.7616467, g: 1.7616467, b: 1.7616467, a: 1}
             key2: {r: 0, g: 0, b: 0, a: 0}
             key3: {r: 0, g: 0, b: 0, a: 0}
             key4: {r: 0, g: 0, b: 0, a: 0}
@@ -1373,7 +1373,7 @@ VisualEffectResource:
             ctime6: 0
             ctime7: 0
             atime0: 0
-            atime1: 65535
+            atime1: 65150
             atime2: 0
             atime3: 0
             atime4: 0
@@ -1386,9 +1386,9 @@ VisualEffectResource:
       m_NamedObject:
         m_Array:
         - m_ExpressionIndex: 6
-          m_Value: {fileID: 0}
+          m_Value: {fileID: 2800000, guid: 35f34c8a9419a498d86d033dac2e8759, type: 3}
         - m_ExpressionIndex: 13
-          m_Value: {fileID: 0}
+          m_Value: {fileID: 8400000, guid: bd0eb497892814b06ba3dc35e0c5a7f0, type: 2}
       m_Bool:
         m_Array: []
     m_ExposedExpressions:
@@ -2810,7 +2810,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEngine.Texture2D, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"obj":{"fileID":8400000,"guid":"fcd8c3cd4e775064fb379815be58d5e8","type":2}}'
+      m_SerializableObject: '{"obj":{"fileID":8400000,"guid":"bd0eb497892814b06ba3dc35e0c5a7f0","type":2}}'
     m_Space: 2147483647
   m_Property:
     name: o
@@ -2895,7 +2895,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEngine.Texture2D, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"obj":{"fileID":8400000,"guid":"32764d5a0342b1440828e4a41b370931","type":2}}'
+      m_SerializableObject: '{"obj":{"fileID":2800000,"guid":"35f34c8a9419a498d86d033dac2e8759","type":3}}'
     m_Space: 2147483647
   m_Property:
     name: o
@@ -3023,7 +3023,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: System.UInt32, mscorlib, Version=4.0.0.0, Culture=neutral,
           PublicKeyToken=b77a5c561934e089
-      m_SerializableObject: 600
+      m_SerializableObject: 1024
     m_Space: 2147483647
   m_Property:
     name: o
@@ -7517,7 +7517,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Parent: {fileID: 114350483966674976}
   m_Children: []
-  m_UIPosition: {x: 784, y: -149}
+  m_UIPosition: {x: 780, y: -195}
   m_UICollapsed: 0
   m_UISuperCollapsed: 1
   m_InputSlots:
@@ -7637,8 +7637,7 @@ MonoBehaviour:
         PublicKeyToken=b77a5c561934e089
     attributes: []
   m_Direction: 1
-  m_LinkedSlots:
-  - {fileID: 8926484042661614998}
+  m_LinkedSlots: []
 --- !u!114 &8926484042661614989
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7952,7 +7951,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
           PublicKeyToken=b77a5c561934e089
-      m_SerializableObject: 0
+      m_SerializableObject: 500
     m_Space: 2147483647
   m_Property:
     name: Count
@@ -7973,8 +7972,7 @@ MonoBehaviour:
       m_Regex: 
       m_RegexMaxLength: 0
   m_Direction: 0
-  m_LinkedSlots:
-  - {fileID: 8926484042661614988}
+  m_LinkedSlots: []
 --- !u!114 &8926484042661614999
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7999,7 +7997,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
           PublicKeyToken=b77a5c561934e089
-      m_SerializableObject: 0
+      m_SerializableObject: 0.1
     m_Space: 2147483647
   m_Property:
     name: Delay
@@ -8640,7 +8638,7 @@ MonoBehaviour:
   - {fileID: 8926484042661615020}
   - {fileID: 8926484042661615021}
   m_UIPosition: {x: 0, y: 0}
-  m_UICollapsed: 1
+  m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_MasterSlot: {fileID: 8926484042661615018}
   m_MasterData:
@@ -14171,7 +14169,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEngine.Gradient, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"colorKeys":[{"color":{"r":9.08241081237793,"g":4.422325611114502,"b":2.8531134128570558,"a":1.0},"time":0.0},{"color":{"r":1.3195079565048218,"g":1.3195079565048218,"b":1.3195079565048218,"a":1.0},"time":0.13823148608207704},{"color":{"r":0.0,"g":0.0,"b":0.0,"a":1.0},"time":1.0}],"alphaKeys":[{"alpha":1.0,"time":0.0},{"alpha":1.0,"time":1.0}],"gradientMode":0}'
+      m_SerializableObject: '{"colorKeys":[{"color":{"r":9.08241081237793,"g":4.422325611114502,"b":2.8531134128570558,"a":1.0},"time":0.0},{"color":{"r":1.7616467475891114,"g":1.7616467475891114,"b":1.7616467475891114,"a":1.0},"time":0.13823148608207704},{"color":{"r":0.0,"g":0.0,"b":0.0,"a":1.0},"time":1.0}],"alphaKeys":[{"alpha":1.0,"time":0.0},{"alpha":1.0,"time":0.994125247001648}],"gradientMode":0}'
     m_Space: 2147483647
   m_Property:
     name: Color
